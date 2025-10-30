@@ -1,20 +1,24 @@
 # 🔍 Visual Data Explorer
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+**Easily explore and visualize mixed datasets—images, text, tables—using powerful AI, web scraping, clustering, and a beautiful dashboard. No coding needed, just upload your data and unlock insights instantly.**
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 
 An AI/ML project for **searchable, interactive visualizations** of heterogeneous datasets scraped live from the internet. This project enables automated data collection, cleaning, embedding generation, clustering, and interactive exploration through a modern web dashboard.
 
+---
+
 ## 🌟 Features
 
-- **🌐 Automated Web Scraping**: Collect images, tables, and text from websites
-- **🧼 Data Cleaning & Normalization**: Process and standardize heterogeneous data
-- **🧠 Embedding Generation**: Create semantic embeddings for images and text using pre-trained models
-- **📈 Clustering & Analysis**: Group similar items using KMeans, DBSCAN, or Hierarchical clustering
-- **🖥️ Interactive Dashboard**: Explore data through a Streamlit-powered web interface
-- **🔍 Semantic Search**: Find relevant items using text or image queries
-- **🤖 GitHub Actions**: Automated retraining and repository updates
+- 🌐 **Automated Web Scraping** – Collect images, tables, and text from websites
+- 🧼 **Data Cleaning & Normalization** – Process and standardize heterogeneous data
+- 🧠 **Embedding Generation** – Create semantic embeddings for images and text using pre-trained models
+- 📈 **Clustering & Analysis** – Group similar items using KMeans, DBSCAN, or Hierarchical clustering
+- 🖥️ **Interactive Dashboard** – Explore data through a Streamlit-powered web interface
+- 🔍 **Semantic Search** – Find relevant items using text or image queries
+- 🤖 **GitHub Actions** – Automated retraining and repository updates
+
+---
 
 ## 📚 Table of Contents
 
@@ -29,6 +33,8 @@ An AI/ML project for **searchable, interactive visualizations** of heterogeneous
 - [Contributing](#contributing)
 - [License](#license)
 
+---
+
 ## 🛠️ Installation
 
 ### Prerequisites
@@ -41,23 +47,25 @@ An AI/ML project for **searchable, interactive visualizations** of heterogeneous
 
 1. **Clone the repository**
 
-```bash
-git clone https://github.com/ArmanSethi/visual-data-explorer.git
-cd visual-data-explorer
-```
+   ```bash
+   git clone https://github.com/ArmanSethi/visual-data-explorer.git
+   cd visual-data-explorer
+   ```
 
 2. **Create a virtual environment** (recommended)
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
 3. **Install dependencies**
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
 
 ## 🚀 Quick Start
 
@@ -87,7 +95,6 @@ from embeddings.embedding_generator import EmbeddingGenerator
 
 generator = EmbeddingGenerator(model_name='clip')
 generator.load_models()
-
 image_embeddings = generator.generate_image_embeddings(image_paths)
 text_embeddings = generator.generate_text_embeddings(texts)
 ```
@@ -102,31 +109,35 @@ labels = engine.fit(embeddings)
 engine.visualize_clusters(embeddings, labels)
 ```
 
+---
+
 ## 📂 Project Structure
 
 ```
 visual-data-explorer/
-├── scraper/              # Web scraping modules
+├── scraper/                  # Web scraping modules
 │   ├── __init__.py
-│   └── web_scraper.py    # Main scraping functionality
-├── processing/          # Data cleaning and normalization
-│   └── data_cleaner.py   # Data cleaning utilities
-├── embeddings/          # Embedding generation and clustering
-│   ├── embedding_generator.py  # Generate embeddings
-│   └── clustering.py     # Clustering algorithms
-├── dashboard/           # Streamlit web application
-│   └── app.py            # Main dashboard application
-├── data/                # Data storage
-│   ├── raw/             # Raw scraped data
-│   ├── processed/       # Cleaned data
-│   └── embeddings/      # Generated embeddings
-├── docs/                # Documentation
+│   └── web_scraper.py        # Main scraping functionality
+├── processing/               # Data cleaning and normalization
+│   └── data_cleaner.py       # Data cleaning utilities
+├── embeddings/               # Embedding generation and clustering
+│   ├── embedding_generator.py # Generate embeddings
+│   └── clustering.py         # Clustering algorithms
+├── dashboard/                # Streamlit web application
+│   └── app.py                # Main dashboard application
+├── data/                     # Data storage
+│   ├── raw/                  # Raw scraped data
+│   ├── processed/            # Cleaned data
+│   └── embeddings/           # Generated embeddings
+├── docs/                     # Documentation
 ├── .github/
-│   └── workflows/       # GitHub Actions workflows
-│       └── retrain.yml   # Automated retraining
-├── requirements.txt     # Python dependencies
-└── README.md            # This file
+│   └── workflows/            # GitHub Actions workflows
+│       └── retrain.yml       # Automated retraining
+├── requirements.txt          # Python dependencies
+└── README.md                 # This file
 ```
+
+---
 
 ## 💻 Usage
 
@@ -155,6 +166,8 @@ python -m embeddings.embedding_generator --input data/processed --output data/em
 ```bash
 python -m embeddings.clustering --embeddings data/embeddings --method kmeans --n-clusters 5
 ```
+
+---
 
 ## 🧱 Modules
 
@@ -206,21 +219,25 @@ Interactive Streamlit dashboard for data exploration.
 - Semantic search interface
 - Real-time data exploration
 
+---
+
 ## 🖥️ Dashboard
 
 The dashboard provides an intuitive interface for exploring your data:
 
-1. **Overview Tab**: Dataset statistics and cluster distributions
-2. **Images Tab**: Image gallery with upload functionality
-3. **Text Tab**: Text document viewer and analyzer
-4. **Search Tab**: Semantic search across all data types
+1. **Overview Tab** – Dataset statistics and cluster distributions
+2. **Images Tab** – Image gallery with upload functionality
+3. **Text Tab** – Text document viewer and analyzer
+4. **Search Tab** – Semantic search across all data types
 
-### Features:
+### Dashboard Features:
 
-- 📁 **File Upload**: Upload images, text files, and CSV data
-- 📊 **Visualization**: Interactive cluster visualizations
-- 🔍 **Search**: Text and image-based semantic search
-- ⚙️ **Configurable**: Adjust clustering parameters in real-time
+- 📁 **File Upload** – Upload images, text files, and CSV data
+- 📊 **Visualization** – Interactive cluster visualizations
+- 🔍 **Search** – Text and image-based semantic search
+- ⚙️ **Configurable** – Adjust clustering parameters in real-time
+
+---
 
 ## 🤖 GitHub Actions
 
@@ -237,13 +254,15 @@ Automatically:
 - Updates cluster assignments
 - Commits changes to repository
 
+---
+
 ## ⚙️ Configuration
 
 ### Environment Variables
 
 Create a `.env` file in the root directory:
 
-```env
+```bash
 SCRAPER_USER_AGENT=Mozilla/5.0...
 EMBEDDING_MODEL=clip
 CLUSTERING_METHOD=kmeans
@@ -258,22 +277,28 @@ Edit `config.yaml` to customize:
 - Clustering algorithms
 - Dashboard preferences
 
+---
+
 ## 📊 Sample Datasets
 
 Sample datasets are provided in `data/samples/`:
 
-- `sample_images/`: 50 sample images
-- `sample_text/`: Text documents
-- `sample_tables/`: CSV data files
+- `sample_images/` – 50 sample images
+- `sample_text/` – Text documents
+- `sample_tables/` – CSV data files
+
+---
 
 ## 📝 Documentation
 
 Detailed documentation is available in the `docs/` directory:
 
-- `API.md`: API reference
-- `ARCHITECTURE.md`: System architecture
-- `DEPLOYMENT.md`: Deployment guide
-- `TUTORIAL.md`: Step-by-step tutorials
+- `API.md` – API reference
+- `ARCHITECTURE.md` – System architecture
+- `DEPLOYMENT.md` – Deployment guide
+- `TUTORIAL.md` – Step-by-step tutorials
+
+---
 
 ## 🤝 Contributing
 
@@ -292,9 +317,13 @@ pip install -r requirements-dev.txt
 pre-commit install
 ```
 
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🚀 Roadmap
 
@@ -307,11 +336,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Docker containerization
 - [ ] Cloud deployment support
 
+---
+
 ## 📞 Contact
 
-**Author**: Arman Sethi
-**GitHub**: [@ArmanSethi](https://github.com/ArmanSethi)
+**Author**: Arman Sethi  
+**GitHub**: [@ArmanSethi](https://github.com/ArmanSethi)  
 **Repository**: [visual-data-explorer](https://github.com/ArmanSethi/visual-data-explorer)
+
+---
 
 ## 🙏 Acknowledgments
 
